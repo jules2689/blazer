@@ -10,6 +10,7 @@
           <%= f.hidden_field :statement %>
           <div id="editor-container">
             <div id="editor" :style="{ height: editorHeight }"><%= @query.statement %></div>
+            <button id="format" type="button" class="btn btn-outline-secondary btn-sm" style="position: absolute; right: 20px; margin-top: -28px;">Format SQL</button>
           </div>
         </div>
 

@@ -18,6 +18,7 @@
 //= require ./routes
 //= require ./queries
 //= require ./fuzzysearch
+//= require ./sql-formatter
 
 Vue.config.devtools = false
 Vue.config.productionTip = false
@@ -32,6 +33,11 @@ $(document).on("change", "#bind input, #bind select", function () {
 
 $(document).on("click", "#code", function () {
   $(this).addClass("expanded")
+})
+
+$(document).on("click", "#format", function () {
+  var editor = ace.edit("editor");
+  editor.setValue(window.sqlFormatter.format(editor.getValue()))
 })
 
 function submitIfCompleted($form) {
