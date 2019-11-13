@@ -12,6 +12,7 @@
 //= require ./chartkick
 //= require ./ace
 //= require ./Sortable
+//= require ./popper
 //= require ./bootstrap
 //= require ./vue
 //= require ./routes
