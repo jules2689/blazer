@@ -3,7 +3,7 @@
 <div class="topbar">
   <div class="d-flex" style="padding-top: 13px;">
     <div><%= render partial: "blazer/nav" %></div>
-    <h3 style="line-height: 34px; display: inline; margin-left: 5px;">
+    <h3 class="flex-grow-1" style="line-height: 34px; display: inline; margin-left: 5px;">
       <%= @dashboard.name %>
     </h3>
     <div><%= link_to "Edit", edit_dashboard_path(@dashboard, variable_params), class: "btn btn-info" %></div>
