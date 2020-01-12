@@ -51,6 +51,7 @@
     <% chart_options = {id: chart_id} %>
     <% if ["line", "line2"].include?(chart_type) %>
       <% chart_options.merge!(min: nil) %>
+      <% chart_options.merge!(legend: @result.legend) %>
     <% end %>
     <% if chart_type == "scatter" %>
       <% chart_options.merge!(library: {tooltips: {intersect: false}}) %>

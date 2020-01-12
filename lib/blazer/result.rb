@@ -19,6 +19,11 @@ module Blazer
       cached_at.present?
     end
 
+    def legend
+      return nil unless %w(line line2).include?(chart_type)
+      @rows.count < 5 # The legend becomes uselss otherwise
+    end
+
     def boom
       @boom ||= begin
         boom = {}
